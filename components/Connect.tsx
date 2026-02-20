@@ -4,11 +4,12 @@ import { motion } from 'framer-motion'
 import { Instagram, ExternalLink } from 'lucide-react'
 
 const socialLinks = [
-  { label: 'Instagram', handle: '@swaggerrite', href: 'https://www.instagram.com/swaggerrite/', followers: '78K', icon: 'instagram' },
-  { label: 'Spotify', handle: 'Swagger Rite', href: 'https://open.spotify.com/artist/3QTjKzRi18DafuSJ1ZQlxR', followers: '10K monthly', icon: 'spotify' },
-  { label: 'Apple Music', handle: 'Swagger Rite', href: 'https://music.apple.com/us/artist/swagger-rite/1163312706', followers: null, icon: 'apple' },
-  { label: 'SoundCloud', handle: 'swaggsrite', href: 'https://soundcloud.com/swaggsrite', followers: '2M+ streams', icon: 'soundcloud' },
-  { label: 'Twitter/X', handle: '@Swagger_Rite', href: 'https://twitter.com/swagger_rite', followers: null, icon: 'twitter' },
+  { label: 'Instagram', handle: '@swaggerrite', href: 'https://www.instagram.com/swaggerrite/', followers: '78K followers' },
+  { label: 'Spotify', handle: 'Swagger Rite', href: 'https://open.spotify.com/artist/3QTjKzRi18DafuSJ1ZQlxR', followers: '10K monthly listeners' },
+  { label: 'Apple Music', handle: 'Swagger Rite', href: 'https://music.apple.com/us/artist/swagger-rite/1163312706', followers: null },
+  { label: 'SoundCloud', handle: 'swaggsrite', href: 'https://soundcloud.com/swaggsrite', followers: '2M+ streams' },
+  { label: 'Twitter/X', handle: '@Swagger_Rite', href: 'https://twitter.com/swagger_rite', followers: null },
+  { label: 'Sony Music', handle: 'Official Page', href: 'https://sonymusic.ca/en/artists/swagger-rite', followers: null },
 ]
 
 export function Connect() {

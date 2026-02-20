@@ -38,14 +38,22 @@ const releases = [
 ]
 
 const singles = [
+  { title: 'Merry Christmas', year: '2024' },
+  { title: 'Off Camera', year: '2023' },
+  { title: '47 Clips', year: '2023' },
   { title: 'Can I Live', year: '2023' },
+  { title: 'Dangerous', year: '2022' },
+  { title: 'Spicy', year: '2021' },
+  { title: 'Compton ft. Sha Hustle & Eva Shaw', year: '2021' },
+  { title: 'Heart Broke Rockstar Sh*t', year: '2020' },
+  { title: 'Sticky', year: '2020' },
+  { title: 'Like That', year: '2020' },
   { title: 'SPLASH GOD ft. Lord Afrixana', year: '2020' },
   { title: 'Drugs & Love ft. Roy Woods', year: '2020' },
+  { title: 'Finals (Raptors Anthem)', year: '2019' },
   { title: 'In Love with the K ft. BlocBoy JB', year: '2019' },
   { title: 'Drop Top ft. Yella Beezy & Flipp Dinero', year: '2019' },
-  { title: '47 Clips', year: '2023' },
-  { title: 'Heart Broke Rockstar Sh*t', year: '2021' },
-  { title: 'Spicy', year: '2021' },
+  { title: 'Drop ft. Ski Mask the Slump God & Kid Buu', year: '2018' },
 ]
 
 export function Discography() {

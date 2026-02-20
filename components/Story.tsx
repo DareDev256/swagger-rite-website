@@ -60,8 +60,9 @@ export function Story() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-lg text-text-primary leading-relaxed">
-              Growing up on the Southside Weston Road/Jane Street area of Toronto,
-              Swagger Rite has lived a life of dualities — success and heartbreak,
+              Dubbed <span className="text-primary font-semibold">&ldquo;Toronto&apos;s One-Man Mosh Pit&rdquo;</span> by
+              Complex, Swagger Rite grew up on the Southside Weston Road/Jane Street
+              area of Toronto — a life of dualities. Success and heartbreak,
               hustling and blue-collar work, fame and dead ends.
             </p>
             <p className="text-text-muted leading-relaxed">
