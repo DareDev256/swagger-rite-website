@@ -1,85 +1,55 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Tv, Music, Users } from 'lucide-react'
 
 const achievements = [
-  {
-    icon: Tv,
-    title: 'HBO Euphoria',
-    description: '"Drop Top" featured in Season 1, Episode 3 of HBO\'s hit show starring Zendaya.',
-  },
-  {
-    icon: Music,
-    title: 'Sony Music Canada',
-    description: 'JV signing with Sony Music Entertainment Canada/RECORDS LLC in 2019.',
-  },
-  {
-    icon: Award,
-    title: 'Veld Festival',
-    description: 'Performed at one of Toronto\'s biggest music festivals alongside major acts.',
-  },
-  {
-    icon: Users,
-    title: 'CBC\'s Decade of Drake',
-    description: 'Featured in CBC GEM documentary series exploring Drake\'s influence on Toronto artists.',
-  },
+  { title: 'HBO Euphoria', stat: 'S1E3', description: '"Drop Top" featured on the hit show' },
+  { title: 'Sony Music', stat: 'JV Deal', description: 'Sony Music Canada / RECORDS LLC' },
+  { title: 'WSHH', stat: '3.2M+', description: '"In Love with the K" premiere views' },
+  { title: 'SoundCloud', stat: '243K+', description: '"Finals" Raptors anthem plays' },
+  { title: 'Veld Festival', stat: 'Performer', description: 'Toronto\'s biggest music festival' },
+  { title: 'CBC', stat: 'Featured', description: '"Decade of Drake" documentary series' },
 ]
 
 const collabs = [
-  'Roy Woods',
-  'BlocBoy JB',
-  'Yella Beezy',
-  'Flipp Dinero',
-  'Ski Mask the Slump God',
-  'Kid Buu',
-  'Eva Shaw',
-  'Sha Hustle',
-  'Lord Afrixana',
-  'Seanpane',
-  'SooDope',
+  'Roy Woods', 'BlocBoy JB', 'Yella Beezy', 'Flipp Dinero',
+  'Ski Mask the Slump God', 'Kid Buu', 'Eva Shaw', 'Sha Hustle',
+  'Yung Tory', '10Tik', 'Seanpane', 'SooDope', 'Lord Afrixana',
 ]
 
 export function Cosigns() {
   return (
     <section className="section-padding bg-surface relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="mb-16 text-center"
+          className="mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <p className="font-accent text-sm tracking-[0.3em] uppercase text-primary mb-4 font-semibold">Credentials</p>
-          <h2 className="font-display text-5xl md:text-7xl font-bold uppercase text-white">
-            Cosigns & Milestones
+          <div className="gold-line mb-4" />
+          <h2 className="font-display text-6xl md:text-8xl font-bold uppercase text-white leading-none">
+            Credentials
           </h2>
         </motion.div>
 
         {/* Achievement cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {achievements.map((item, i) => {
-            const Icon = item.icon
-            return (
-              <motion.div
-                key={item.title}
-                className="card-gold p-6 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-              >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-display text-lg font-bold uppercase text-white mb-2">{item.title}</h3>
-                <p className="text-text-muted text-sm">{item.description}</p>
-              </motion.div>
-            )
-          })}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-12">
+          {achievements.map((item, i) => (
+            <motion.div
+              key={item.title}
+              className="card-gold p-4"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06, duration: 0.4 }}
+            >
+              <p className="font-display text-2xl md:text-3xl font-bold text-primary leading-none">{item.stat}</p>
+              <h3 className="font-display text-sm font-bold uppercase text-white mt-2">{item.title}</h3>
+              <p className="text-text-dim text-xs mt-1">{item.description}</p>
+            </motion.div>
+          ))}
         </div>
 
         {/* Collaborators */}
@@ -87,18 +57,20 @@ export function Cosigns() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
-          <h3 className="font-display text-2xl font-bold uppercase text-text-muted mb-6 text-center">Collaborators</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <p className="font-accent text-[10px] tracking-[0.3em] uppercase text-primary/70 mb-4 font-bold">
+            Collaborators
+          </p>
+          <div className="flex flex-wrap gap-2">
             {collabs.map((name, i) => (
               <motion.span
                 key={name}
-                className="px-4 py-2 border border-white/[0.06] text-text-muted text-sm font-accent tracking-wider rounded-full hover:border-primary/30 hover:text-primary transition-all duration-300 cursor-default"
+                className="px-3 py-1.5 border border-white/[0.06] text-text-muted text-xs font-accent tracking-wider hover:border-primary/30 hover:text-primary transition-all duration-300 cursor-default"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05, duration: 0.3 }}
+                transition={{ delay: i * 0.03, duration: 0.3 }}
               >
                 {name}
               </motion.span>
